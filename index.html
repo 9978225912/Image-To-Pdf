@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Image to PDF Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <h1>📷 Image to PDF Converter</h1>
+            <p>Convert your images to high-quality PDF documents with ease.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="upload-section card">
+            <h2>1. Upload Your Images</h2>
+            <p class="section-description">Drag & drop your images here or click to browse. Supports JPG, PNG, and HEIC formats.</p>
+
+            <div class="drop-area" id="dropArea">
+                <i class="icon-upload"></i>
+                <p>Drag & Drop Images Here</p>
+                <span class="or-separator">OR</span>
+                <label for="imageUpload" class="btn btn-primary">Browse Files</label>
+                <input type="file" id="imageUpload" accept="image/jpeg, image/png, image/heic, image/heif" multiple>
+            </div>
+
+            <div id="statusMessage" class="status-message" role="alert" aria-live="polite">
+                </div>
+
+            <div id="imagePreview" class="image-preview">
+                <p class="preview-placeholder" id="previewPlaceholder">No images selected yet.</p>
+            </div>
+
+            <button id="convertBtn" class="btn btn-success convert-button" disabled>
+                <span class="btn-text">Convert to PDF</span>
+                <span class="spinner" style="display:none;"></span>
+            </button>
+        </section>
+
+        <section class="download-section card" id="downloadSection" style="display:none;">
+            <h2>2. Your PDF is Ready!</h2>
+            <div class="pdf-download-area">
+                <p>Your PDF document has been successfully generated. Click the button below to download.</p>
+                <a id="downloadLink" class="btn btn-download" download="converted_images.pdf">
+                    <i class="icon-download"></i> Download PDF
+                </a>
+                <button id="newConversionBtn" class="btn btn-secondary">Start New Conversion</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 Professional Image to PDF. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
